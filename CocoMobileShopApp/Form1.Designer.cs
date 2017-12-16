@@ -49,8 +49,7 @@
             this.userName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.userName.CustomButton.UseSelectable = true;
             this.userName.CustomButton.Visible = false;
-            this.userName.Lines = new string[] {
-        "أسم المستخدم"};
+            this.userName.Lines = new string[0];
             this.userName.Location = new System.Drawing.Point(182, 97);
             this.userName.MaxLength = 32767;
             this.userName.Name = "userName";
@@ -62,7 +61,6 @@
             this.userName.ShortcutsEnabled = true;
             this.userName.Size = new System.Drawing.Size(201, 23);
             this.userName.TabIndex = 0;
-            this.userName.Text = "أسم المستخدم";
             this.userName.UseSelectable = true;
             this.userName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.userName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -82,12 +80,11 @@
             this.Password.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Password.CustomButton.UseSelectable = true;
             this.Password.CustomButton.Visible = false;
-            this.Password.Lines = new string[] {
-        "كلمه المرور"};
+            this.Password.Lines = new string[0];
             this.Password.Location = new System.Drawing.Point(182, 136);
             this.Password.MaxLength = 32767;
             this.Password.Name = "Password";
-            this.Password.PasswordChar = '\0';
+            this.Password.PasswordChar = '●';
             this.Password.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Password.SelectedText = "";
             this.Password.SelectionLength = 0;
@@ -95,10 +92,12 @@
             this.Password.ShortcutsEnabled = true;
             this.Password.Size = new System.Drawing.Size(201, 23);
             this.Password.TabIndex = 1;
-            this.Password.Text = "كلمه المرور";
             this.Password.UseSelectable = true;
+            this.Password.UseSystemPasswordChar = true;
             this.Password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Password.Leave += new System.EventHandler(this.Password_Leave);
+            this.Password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Password_MouseClick);
             // 
             // Login
             // 
@@ -115,6 +114,7 @@
             this.Login.TabIndex = 2;
             this.Login.Text = "دخول ";
             this.Login.UseVisualStyleBackColor = false;
+            this.Login.Click += new System.EventHandler(this.Login_Click);
             // 
             // metroLabel1
             // 
