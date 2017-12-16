@@ -17,5 +17,10 @@ namespace CocoMobileShopApp
         {
             InitializeComponent();
         }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
